@@ -1,0 +1,45 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src: local("Segoe UI"), local("SegoeUI"), url("../fonts/SegoeUI.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Segoe UI";
+
+  font-display: swap;
+  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("../fonts/SegoeUI-SemiBold.woff") format("woff");
+}
+
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src: local("Whitney Book"), local("Whitney-Book"), url("../fonts/Whitney-Book.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src: local("Whitney Medium"), local("Whitney-Medium"), url("../fonts/Whitney-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Whitney";
+
+  font-display: swap;
+  src: local("Whitney Semibold"), local("Whitney-Semibold"), url("../fonts/Whitney-Semibold.woff") format("woff");
+}

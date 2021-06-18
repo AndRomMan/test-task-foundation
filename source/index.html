@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/SegoeUI.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/SegoeUI-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Whitney-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Whitney-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Whitney-Semibold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Тестовое задание для компании Media Works">
+    <title>Авто Лизинг</title>
+  </head>
+
+  <body class="body-flex">
+    <div style="display: none;">
+      @@include('./img/compressed/sprite.svg')
+    </div>
+
+    <header class="site-header">
+      <nav class="main-nav container">
+        <a class="logo" aria-label="Логотип компании">
+          <img src="img/logo.svg" alt="Логотип компании Авто Лизинг" width="147" height="32">
+        </a>
+
+        <a class="main-nav__link" href="#" aria-label="Перейти на страницу информации для клиентов">
+          Клиентам
+        </a>
+
+        <button class="main-nav__button" type="button" aria-label="Авторизация">
+          <svg width="24" height="24" role="img">
+            <use xlink:href="#user"></use>
+          </svg>
+          <span>Войти</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <h1 class="visually-hidden">
+        Платформа для подбора авто в лизинг
+      </h1>
+
+      <section class="promo">
+        <div class="promo__wrapper container">
+          <div class="promo__text-column">
+            <h2 class="promo__title">
+              Подбор авто в&nbsp;&nbsp;лизинг по&nbsp;&nbsp;выгодной цене
+            </h2>
+            <p class="promo__subtitle">
+              IT&nbsp;&nbsp;платформа по&nbsp;быстрому поиску автомобиля от&nbsp;&nbsp;официальных дилеров&nbsp;РФ
+            </p>
+
+            <button class="registration-button" aria-label="Регистрация на сайте">
+              Регистрация
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__wrapper container">
+
+          <h2 class="advantages__title">
+            Меньше условий&nbsp;&nbsp;&ndash; больше&nbsp;&nbsp;возможностей
+          </h2>
+
+          <ul class="advantages__list advantages-list">
+            <li class="advantages-list__item advantages-item">
+              <div class="advantages-item__text">
+                <h3>
+                  Экономия времени
+                </h3>
+                <p>
+                  Дополнительный канал потенциальных клиентов, готовых приобрести автомобиль, без затрат на&nbsp;рекламу и&nbsp;маркетинг.
+                </p>
+              </div>
+
+              <div class="advantages-item__img">
+                <img src="img/time.svg" width="193" height="193" alt="Песочные часы и человек за компьютером">
+              </div>
+            </li>
+
+            <li class="advantages-list__item advantages-item">
+              <div class="advantages-item__text">
+                <h3>
+                  Никаких задержек
+                </h3>
+                <p>
+                  Вы&nbsp;получаете запросы сразу&nbsp;же после&nbsp;отправки клиентом.
+                </p>
+              </div>
+
+              <div class="advantages-item__img">
+                <img src="img/speed.svg" width="193" height="193" alt="Человек с планшетом в руках отправляет email">
+              </div>
+            </li>
+
+            <li class="advantages-list__item advantages-item">
+              <div class="advantages-item__text">
+                <h3>
+                  Максимальная информативность
+                </h3>
+                <p>
+                  В&nbsp;каждой заявке указан регион поиска, марка и&nbsp;модель авто, а&nbsp;так&nbsp;же индивидуальные запросы клиента.
+                </p>
+              </div>
+
+              <div class="advantages-item__img">
+                <img src="img/information.svg" width="193" height="193" alt="Человек работает с интерфейсом портала">
+              </div>
+            </li>
+
+            <li class="advantages-list__item advantages-item">
+              <div class="advantages-item__text">
+                <h3>
+                  Удобство общения
+                </h3>
+                <p>
+                  Для каждого запроса у&nbsp;вас открыт чат&nbsp;с&nbsp;клиентом с&nbsp;возможностью отправки документов.
+                </p>
+              </div>
+
+              <div class="advantages-item__img">
+                <img src="img/chat.svg" width="193" height="193" alt="Человек общается в чате">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="call-to-action">
+        <div class="call-to-action__wrapper container">
+          <h2 class="visually-hidden">Регистрируйтесь на портале Авто Лизинг</h2>
+
+          <div class="call-to-action__background-block">
+            <div class="call-to-action__text-column">
+              <p class="call-to-action__title">
+                Регистрируйся и&nbsp;&nbsp;получай актуальные&nbsp;&nbsp;запросы на&nbsp;&nbsp;автомобили от&nbsp;&nbsp;заинтересованных клиентов
+              </p>
+            </div>
+            <button class="registration-button registration-button--sm" aria-label="Регистрация на сайте">
+              Регистрация
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <div class="modal">
+      <div class="modal__card">
+        <p class="modal__title">
+          Авторизация
+        </p>
+
+        <form class="modal__form" action="#" method="POST">
+          <label for="user-mail">E-mail</label>
+          <input type="email" id="user-mail" name="user-mail" placeholder="Введите e-mail" required>
+
+          <label for="user-mail">Пароль</label>
+          <input type="password" id="user-password" name="user-password" placeholder="Введите пароль" required>
+
+          <button class="modal__enter registration-button" type="submit">
+            Войти
+          </button>
+        </form>
+
+        <button class="modal__close" type="button" aria-label="Закрыть окно авторизации">
+          <svg width="14" height="14" role="img">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+  </body>
+
+</html>

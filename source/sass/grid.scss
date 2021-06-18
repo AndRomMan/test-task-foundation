@@ -1,0 +1,33 @@
+@media (max-width: 1199px) {
+  // q
+}
+
+@media (max-width: 991px) {
+  // q
+}
+
+@media (max-width: 767px) {
+  // q
+}
+
+@media (max-width: 575px) {
+  // q
+}
+
+/*Предпочтите путь mobile-first, избегайте указания @media-условия max-width в пользу min-width.*/
+
+@media (min-width: 576px) {
+  /* Правила для смартфонов от 576px */
+}
+
+@media (min-width: 768px) {
+  /* Правила для планшетов и больших экранов от 768px */
+}
+
+@media (min-width: 992px) {
+  /* Правила для ноутбуков и компьютеров от 992px  */
+}
+
+@media (min-width: 1200px) {
+  /* Правила только для больших экранов  от 1200px*/
+}

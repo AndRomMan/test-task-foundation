@@ -1,0 +1,58 @@
+//--------------------------------- Viewports
+$viewport--xm: 320px;
+$viewport--sm: 576px;
+$viewport--md: 768px;
+$viewport--lg: 992px;
+$viewport--lg-1: 1024px;
+$viewport--xl: 1200px;
+$padding--xl: 15px;
+$padding--sm: 10px;
+$container-max-width: 1200px;
+//--------------------------------- Retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// -------------------------- Typography
+$font--segoe: "Segoe UI", "Arial", sans-serif;
+$font--whitney: "Whitney", "Arial", sans-serif;
+
+// -------------------------- fonts
+$white: #ffffff;
+$haiti: #2e2d35;
+$grape: #474351;
+$grey-suit: #918d9a;
+$quartz: #dddae7;
+
+// -------------------------- Borders
+$border--input: $quartz;
+$border-radius--input: 4px;
+$border-radius--card: 6px;
+$border-radius--call: 10px;
+
+// -------------------------- Background colors
+// promo background gradient
+$persia-indigo: #2d1686;
+$purple-heart: #4e33b5;
+$magnolia: #f6f5f9;
+// -------------------------- Modal
+$haiti-dark: #1c182f;
+$modal-back: rgba($haiti-dark, 0.3);
+
+// -------------------------- Buttons
+$outrageous-orange: #f25b24;
+$border-radius--button: 4px;
+
+// -------------------------- Interactive
+$opacity--active: 0.7;
+// .button:hover,
+// .button:focus,
+// .button:active
+
+// -------------------------- Modal
+$card-shadow: (0 4px 4px rgba(0, 0, 0, 0.25));
+
+// -------------------------- Background image
+// соотношение сторон для фонового изображения в блоке "call-to-action"
+:root {
+  --aspect-ratio--call: 2.153;
+}
