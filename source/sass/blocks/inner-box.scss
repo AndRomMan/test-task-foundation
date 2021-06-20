@@ -1,0 +1,58 @@
+
+.inner-box {
+  //
+}
+
+.inner-box__list {
+  position: relative;
+
+  padding-left: 100px;
+}
+
+.inner-box__list::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -25px;
+
+  display: block;
+  width: 70px;
+  height: 15px;
+
+  border-bottom: 1px solid $whisper;
+  border-left: 1px solid $whisper;
+}
+
+.inner-box__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inner-box__title {
+  position: relative;
+
+  @include font--futura(20px, 25px, 400, $acadia);
+  @include summary-customization;
+}
+
+.inner-box[open] .inner-box__title {
+  margin-bottom: 10px;
+}
+
+.inner-box[open] .inner-box__list {
+  padding-bottom: 5px;
+}
+
+.inner-box__title::before {
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65% auto;
+  border: 1px solid transparent;
+
+  @include box-pseudo;
+}
+
+.inner-box[open] .inner-box__title::before {
+  background-image: url("../img/icon-minus.svg");
+}

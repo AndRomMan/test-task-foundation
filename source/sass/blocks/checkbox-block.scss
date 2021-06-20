@@ -1,0 +1,49 @@
+.checkbox-block {
+  position: relative;
+}
+
+.checkbox-block__input {
+  position: absolute;
+  top: 2px;
+  left: -36px;
+  z-index: -1;
+}
+
+.checkbox-block__description {
+  position: relative;
+
+  cursor: pointer;
+
+  @include font--futura(20px, 25px, 400, $acadia);
+}
+
+.checkbox-block--single .checkbox-block__description {
+  font-weight: 600;
+}
+
+.checkbox-block__description::before {
+  border: 1px solid $concrete;
+
+  @include box-pseudo;
+}
+
+.checkbox-block__description:hover::after {
+  @include focus-line-pseudo;
+}
+
+.checkbox-block__input:focus + .checkbox-block__description::after {
+  @include focus-line-pseudo;
+}
+
+.checkbox-block__input:checked + .checkbox-block__description::before {
+  z-index: 2;
+
+  background-color: $acadia;
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-block__description:active {
+  opacity: $opacity--active;
+}

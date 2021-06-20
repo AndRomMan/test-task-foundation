@@ -7,7 +7,9 @@
 - **[CV на career.habr.com](https://career.habr.com/andromman)**
 
 * * *
-Ссылка на хостинг: **[Целевые группы](https://demindesign.ru//)**
+Ссылка на хостинг: **[Целевые группы](https://demindesign.ru//foundation)**
+
+Ссылка на репозиторий: **[Foundation](https://github.com/AndRomMan/foundation)** 
 
 * * *
 ## Задача

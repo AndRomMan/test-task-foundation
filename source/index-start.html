@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/FuturaPT-Demi.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Тестовое задание для БФ Нужна помощь">
+    <title>Компонент: Целевые группы</title>
+  </head>
+
+  <body>
+    <div style="display: none;">
+      @@include('./img/compressed/sprite.svg')
+    </div>
+
+    <main>
+      <h1 class="visually-hidden">
+        Форма выбора целевых групп
+      </h1>
+
+      <section class="form-wrapper container">
+        <h2 class="form-wrapper__title">
+          Целевые группы
+        </h2>
+        <p class="form-wrapper__subtitle">
+          Укажите, кому помогает ваша организация
+        </p>
+
+        <form class="form" action="#" method="GET">
+
+          <ul class="form__list">
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Дети</summary>
+                <div class="outer-box__wrapper">
+                  <div class="checkbox-block">
+                    <input id="1" type="checkbox">
+                    <label for="1">
+                      Все редкие заболевания
+                    </label>
+                  </div>
+
+                  <details class="inner-box">
+                    <summary class="inner-box__title">Имеющие редкие заболевания</summary>
+                    <div class="inner-box__wrapper">
+                      <div class="checkbox-block">
+                        <input id="2" type="checkbox">
+                        <label for="2">
+                          input
+                        </label>
+                      </div>
+
+                      <div class="checkbox-block">
+                        <input id="3" type="checkbox">
+                        <label for="3">
+                          input
+                        </label>
+                      </div>
+                    </div>
+                  </details>
+
+                  <div class="checkbox-block">
+                    <input id="13" type="checkbox">
+                    <label for="13">
+                      input
+                    </label>
+                  </div>
+                </div>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input id="11" type="checkbox">
+                <label for="11">
+                  Single input
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input id="12" type="checkbox">
+                <label for="12">
+                  Single input
+                </label>
+              </div>
+            </li>
+          </ul>
+
+          <button class="form__button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </section>
+
+    </main>
+
+    <script src="js/main.min.js"></script>
+  </body>
+
+</html>

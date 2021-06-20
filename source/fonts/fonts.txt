@@ -12,24 +12,20 @@
     межбуквенный интервал;
 	капитализация
 
-	100: Thin;
-    200: Extra Light (Ultra Light);
-    300: Light;
-    400: Normal (regular, auto); Book
-    500: Medium;
-    600: Semi-bold;
-    700: Bold;
-    800: Extra Bold (Ultra Bold);
-    900: Black (Heavy).
+100 	Тонкий (Волосяной) Thin (Hairline)
+200 	Дополнительный светлый (Сверхсветлый) Extra Light (Ultra Light)
+300 	Светлый Light
+400 	Нормальный Normal (regular, auto);
+500 	Средний Medium
+600 	Полужирный Semi Bold (Demi Bold)
+700 	Жирный Bold
+800 	Дополнительный жирный (Сверхжирный) Extra Bold (Ultra Bold)
+900 	Чёрный (Густой) Black (Heavy)
 
   font-size: 16px;                      /* размер шрифта */
   line-height: 22px;                    /* auto, интерлиньяж стандартный — 120% */
 
-Segoe UI
-regular
-semibold
-
-Whitney
-book
-medium
-semibold
+Futura PT
+500
+400
+600

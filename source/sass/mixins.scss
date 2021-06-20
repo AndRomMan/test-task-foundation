@@ -1,24 +1,8 @@
-@mixin gradient--back {
-  background: linear-gradient(90deg, $persia-indigo 0%, $purple-heart 100%);
-}
-
-@mixin shadow--modal-card {
-  box-shadow: $card-shadow;
-}
-
-@mixin font--segoe($size, $line_height, $weight, $color) {
+@mixin font--futura($size, $line_height, $weight, $color) {
   font-weight: $weight;
   font-size: $size;
   line-height: $line_height;
   font-family: $font--segoe;
-  color: $color;
-}
-
-@mixin font--whitney($size, $line_height, $weight, $color) {
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $line_height;
-  font-family: $font--whitney;
   color: $color;
 }
 
@@ -67,17 +51,44 @@
   }
 }
 
-
-@mixin button-border {
-  border: 1px solid transparent;
-  border-radius: $border-radius--button;
-  outline: none;
+@mixin button-hover-focus {
+  outline: 2px solid $white;
+  outline-offset: -4px;
 }
 
-@mixin button-hover {
-  border: 1px solid $white;
+@mixin summary-customization {
+  display: block;
+
+  cursor: pointer;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 }
 
-@mixin button-focus {
-  border: 1px solid $white;
+@mixin box-pseudo {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -36px;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-color: $white;
+  cursor: pointer;
+}
+
+
+@mixin focus-line-pseudo {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+
+  display: block;
+  width: 100%;
+  height: 2px;
+
+  background-color: $acadia;
 }

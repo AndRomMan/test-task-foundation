@@ -1,0 +1,56 @@
+
+.outer-box {
+  //
+}
+
+.outer-box__list {
+  padding-left: 0;
+}
+
+.outer-box__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.outer-box__title {
+  position: relative;
+
+  outline-offset: 4px;
+
+  @include font--futura(20px, 25px, 600, $acadia);
+  @include summary-customization;
+}
+
+.outer-box__title::before {
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  border: 1px solid transparent;
+
+  @include box-pseudo;
+}
+
+.outer-box[open] .outer-box__title::before {
+  background-image: url("../img/icon-minus.svg");
+}
+
+.outer-box[open] .outer-box__title {
+  margin-bottom: 26px;
+}
+
+.outer-box[open] .outer-box__list {
+  padding-bottom: 12px;
+}
+
+.outer-box:hover .outer-box__title::after {
+  @include focus-line-pseudo;
+}
+
+.outer-box:focus .outer-box__title::after {
+  @include focus-line-pseudo;
+}
+
+.outer-box__title:active {
+  opacity: $opacity--active;
+}
