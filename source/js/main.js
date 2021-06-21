@@ -1,88 +1,30 @@
 /* eslint-disable no-console */
 'use strict';
 
-let body = document.body;
+// import {groups} from './groups.min.js';
+// import {flatArray} from './flat-array.min.js';
+// import {checkForm} from './check-form.min.js';
 
-const groups = [
-  {
-    id: 1,
-    name: 'Дети',
-    groups: [
-      {
-        id: 2,
-        name: 'Имеющие редкие заболевания',
-        groups: [
-          {
-            id: 3,
-            name: 'Spina Bifida',
-            groups: [],
-          },
-          {
-            id: 4,
-            name: 'Буллёзный эпидермолиз',
-            groups: [],
-          },
-          {
-            id: 5,
-            name: 'Гемофилия',
-            groups: [],
-          },
-        ],
-      },
-      {
-        id: 6,
-        name: 'Имеющие тяжелые заболевания',
-        groups: [
-          {
-            id: 7,
-            name: 'Синдром Лежена',
-            groups: [],
-          },
-          {
-            id: 8,
-            name: 'Синдром Ретта',
-            groups: [],
-          },
-          {
-            id: 9,
-            name: 'Эктодермальная ангидротическая дисплазия',
-            groups: [],
-          },
-        ],
-      },
-      {
-        id: 10,
-        name: 'С инвалидностью',
-        groups: [],
-      },
-      {
-        id: 11,
-        name: 'ВИЧ-положительные',
-        groups: [],
-      },
-      {
-        id: 12,
-        name: 'Мигранты и беженцы',
-        groups: [],
-      },
-    ],
-  },
+// let rootList = document.querySelector('.form__list');
+let rootList = document.querySelector('ul[id="0"]');
+// console.log(rootList);
 
-  {
-    id: 13,
-    name: 'Профессиональные сообщества',
-    groups: [],
-  },
-  {
-    id: 14,
-    name: 'Местные сообщества',
-    groups: [],
-  },
-  {
-    id: 15,
-    name: 'Религиозные общины',
-    groups: [],
-  },
-];
+// data атрибуты
+// console.log(rootList.dataset.list);
+// console.log(typeof +rootList.dataset.list);
 
-console.log(groups);
+// 1 К root листу будем добавлять узлы первого уровня
+//  родительские(parent) и одиночные(single)
+
+// 2 К single узлу добавляем класс
+// checkbox-block--single
+
+// 3 К checkbox-block узлу "все" добавляем
+// id=all + номер id родителя
+// checkbox-block__description = "Все " + name.toLowerCase() родителя
+
+// Удаление дубликатов из массива
+// let array = [1, 3, 3, 1, 4, 5, 6, 6, 7, 7, 7];
+// let uniqueSet = new Set(array);
+// let uniqueArray = Array.from(uniqueSet);
+// console.log(uniqueArray);

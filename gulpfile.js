@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-// v1.1 полный функционал
-// + адаптация под проект
+// отключен Babel
 
 // скрипты дополнительной обработки img находятся в файле gulpfile_img_treating.js
 
@@ -173,26 +172,28 @@ function copyVendorCSSToBuild() {
 // exports.copyVendorCSSToBuild = copyVendorCSSToBuild;
 
 function getJS() {
-  return src(path.script.source)
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      })
-    )
-    .pipe(
-      terser({
-        ecma: 2015,
-        // ecma: 5,
-        // ecma: 2015, // specify one of: 5, 2015, 2016, etc.
-      })
-    )
-    .pipe(concat('main.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemap.write('.'))
-    .pipe(dest(path.script.build))
-    .pipe(browsersync.stream());
+  return (
+    src(path.script.source)
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      // .pipe(
+      //   babel({
+      //     presets: ['@babel/preset-env'],
+      //   })
+      // )
+      .pipe(
+        terser({
+          ecma: 2015,
+          // ecma: 5,
+          // ecma: 2015, // specify one of: 5, 2015, 2016, etc.
+        })
+      )
+      // .pipe(concat('main.js'))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(sourcemap.write('.'))
+      .pipe(dest(path.script.build))
+      .pipe(browsersync.stream())
+  );
 }
 
 // ========= css producing module =========
