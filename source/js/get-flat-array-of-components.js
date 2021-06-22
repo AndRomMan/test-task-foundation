@@ -76,3 +76,5 @@ function sortArray(inputArray) {
   });
   return inputArray;
 }
+
+export {componentArray};

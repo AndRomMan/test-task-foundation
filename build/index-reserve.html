@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/FuturaPT-Demi.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.min.css">
+    <meta name="description" content="Тестовое задание для БФ Нужна помощь">
+    <title>Компонент: Целевые группы</title>
+  </head>
+
+  <body>
+    <!-- <div style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-check" viewBox="0 0 13 10"><path d="M1.077 3l4 5 7-7" stroke="#fff" stroke-width="2.5"/></symbol><symbol id="icon-minus" viewBox="0 0 16 2"><path d="M16 2H0V0h16v2z" fill="#302F2D"/></symbol><symbol id="icon-plus" viewBox="0 0 16 16"><path d="M16 9H9v7H7V9H0V7h7V0h2v7h7v2z" fill="#302F2D"/></symbol></svg>
+    </div> -->
+
+    <main>
+      <h1 class="visually-hidden">
+        Форма выбора целевых групп
+      </h1>
+
+      <section class="form-wrapper container">
+        <h2 class="form-wrapper__title">
+          Целевые группы
+        </h2>
+        <p class="form-wrapper__subtitle">
+          Укажите, кому помогает ваша организация
+        </p>
+
+        <form class="form" action="#" method="GET">
+          <ul class="form__list" id="0">
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Дети</summary>
+                <ul class="outer-box__list" id="1" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-1" type="checkbox">
+                      <label class="checkbox-block__description" for="all-1">
+                        Все дети
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <details class="inner-box">
+                      <summary class="inner-box__title">Имеющие редкие заболевания</summary>
+                      <ul class="inner-box__list" id="2" data-list="inner">
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="all-2" type="checkbox">
+                            <label class="checkbox-block__description" for="all-2">
+                              Все редкие заболевания
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="3" type="checkbox">
+                            <label class="checkbox-block__description" for="3">
+                              Spina Bifida
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="4" type="checkbox">
+                            <label class="checkbox-block__description" for="4">
+                              Буллёзный эпидермолиз
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="5" type="checkbox">
+                            <label class="checkbox-block__description" for="5">
+                              Гемофилия
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="6" type="checkbox">
+                            <label class="checkbox-block__description" for="6">
+                              Миодистрофия Дюшенна
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="7" type="checkbox">
+                            <label class="checkbox-block__description" for="7">
+                              Муковисцидоз
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="8" type="checkbox">
+                            <label class="checkbox-block__description" for="8">
+                              Несовершенный остеогенез
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="9" type="checkbox">
+                            <label class="checkbox-block__description" for="9">
+                              Синдром Дауна
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="10" type="checkbox">
+                            <label class="checkbox-block__description" for="10">
+                              Синдром Лежена
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="11" type="checkbox">
+                            <label class="checkbox-block__description" for="11">
+                              Синдром Ретта
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="12" type="checkbox">
+                            <label class="checkbox-block__description" for="12">
+                              Эктодермальная ангидротическая дисплазия
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <details class="inner-box">
+                      <summary class="inner-box__title">Имеющие тяжелые заболевания</summary>
+                      <ul class="inner-box__list" id="15" data-list="inner">
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="all-15" type="checkbox">
+                            <label class="checkbox-block__description" for="all-15">
+                              Все тяжелые заболевания
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="16" type="checkbox">
+                            <label class="checkbox-block__description" for="16">
+                              тяжелое заболевание 1
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="17" type="checkbox">
+                            <label class="checkbox-block__description" for="17">
+                              тяжелое заболевание 2
+                            </label>
+                          </div>
+                        </li>
+
+                        <li class="inner-box__item">
+                          <div class="checkbox-block">
+                            <input class="checkbox-block__input" id="18" type="checkbox">
+                            <label class="checkbox-block__description" for="18">
+                              тяжелое заболевание 3
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="19" type="checkbox">
+                      <label class="checkbox-block__description" for="19">
+                        С инвалидностью
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="20" type="checkbox">
+                      <label class="checkbox-block__description" for="20">
+                        ВИЧ-положительные
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="21" type="checkbox">
+                      <label class="checkbox-block__description" for="21">
+                        Мигранты и беженцы
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="22" type="checkbox">
+                      <label class="checkbox-block__description" for="22">
+                        Нуждающиеся в лечении
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="23" type="checkbox">
+                      <label class="checkbox-block__description" for="23">
+                        Онкобольные
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="24" type="checkbox">
+                      <label class="checkbox-block__description" for="24">
+                        Паллиативные больные
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="25" type="checkbox">
+                      <label class="checkbox-block__description" for="25">
+                        Перенесшие насилие
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="26" type="checkbox">
+                      <label class="checkbox-block__description" for="26">
+                        Перенесшие травлю
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="27" type="checkbox">
+                      <label class="checkbox-block__description" for="27">
+                        Пропавшие без вести и потерявшиеся
+                      </label>
+                    </div>
+                  </li>
+
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="28" type="checkbox">
+                      <label class="checkbox-block__description" for="28">
+                        Сироты
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Подростки</summary>
+                <ul class="outer-box__list" id="29" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-29" type="checkbox">
+                      <label class="checkbox-block__description" for="all-29">
+                        Все подростки
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Женщины</summary>
+                <ul class="outer-box__list" id="30" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-30" type="checkbox">
+                      <label class="checkbox-block__description" for="all-30">
+                        Все женщины
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Взрослые</summary>
+                <ul class="outer-box__list" id="31" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-31" type="checkbox">
+                      <label class="checkbox-block__description" for="all-31">
+                        Все взрослые
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Пожилые</summary>
+                <ul class="outer-box__list" id="32" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-32" type="checkbox">
+                      <label class="checkbox-block__description" for="all-32">
+                        Все пожилые
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Семьи</summary>
+                <ul class="outer-box__list" id="33" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-33" type="checkbox">
+                      <label class="checkbox-block__description" for="all-33">
+                        Все семьи
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input class="checkbox-block__input" id="34" type="checkbox">
+                <label class="checkbox-block__description" for="34">
+                  Профессиональные сообщества
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input class="checkbox-block__input" id="35" type="checkbox">
+                <label class="checkbox-block__description" for="35">
+                  Местные сообщества
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input class="checkbox-block__input" id="36" type="checkbox">
+                <label class="checkbox-block__description" for="36">
+                  Религиозные общины
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Народности</summary>
+                <ul class="outer-box__list" id="37" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-37" type="checkbox">
+                      <label class="checkbox-block__description" for="all-37">
+                        Все народности
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Населенные пункты</summary>
+                <ul class="outer-box__list" id="38" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-38" type="checkbox">
+                      <label class="checkbox-block__description" for="all-38">
+                        Все населенные пункты
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input class="checkbox-block__input" id="39" type="checkbox">
+                <label class="checkbox-block__description" for="39">
+                  Некоммерческий сектор
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <div class="checkbox-block checkbox-block--single">
+                <input class="checkbox-block__input" id="40" type="checkbox">
+                <label class="checkbox-block__description" for="40">
+                  Общество
+                </label>
+              </div>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Животные</summary>
+                <ul class="outer-box__list" id="41" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-41" type="checkbox">
+                      <label class="checkbox-block__description" for="all-41">
+                        Все животные
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+
+            <li class="form__field">
+              <details class="outer-box">
+                <summary class="outer-box__title form__field-title">Экология</summary>
+                <ul class="outer-box__list" id="42" data-list="outer">
+                  <li class="outer-box__item">
+                    <div class="checkbox-block">
+                      <input class="checkbox-block__input" id="all-42" type="checkbox">
+                      <label class="checkbox-block__description" for="all-42">
+                        Все экология
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <button class="form__button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </section>
+    </main>
+
+
+    <!-- шаблон для элемента inner списка parent: N, children: true -->
+    <template id="inner-box">
+      <details class="inner-box">
+        <summary class="inner-box__title">
+          <!-- название родительского листа innerParentName -->
+        </summary>
+        <ul class="inner-box__list" id="parent-num-inner" data-list="inner">
+          <li class="inner-box__item">
+            <div class="checkbox-block">
+              <input class="checkbox-block__input" id="all-parent-num-inner" type="checkbox">
+              <label class="checkbox-block__description" for="all-parent-num-inner">
+                <!-- "Все" + innerParentName.toLowerCase() -->
+              </label>
+            </div>
+          </li>
+
+          <!-- <li class="inner-box__item"></li> -->
+        </ul>
+      </details>
+    </template>
+
+    <!-- шаблон для элемента inner списка parent: N, children: false -->
+    <!-- если у родителя ul атрибут dataset.inner -->
+    <template id="inner-box__item">
+      <li class="inner-box__item">
+        <div class="checkbox-block">
+          <input class="checkbox-block__input" id="id-num-inner" type="checkbox">
+          <label class="checkbox-block__description" for="id-num-inner">
+            <!-- content -->
+          </label>
+        </div>
+      </li>
+    </template>
+
+
+    <!-- Шаблон для поля формы в листе parent: 0, children: true -->
+    <template id="form__field__outer__box">
+      <li class="form__field">
+        <details class="outer-box">
+          <summary class="outer-box__title form__field-title">
+            <!-- название родительского листа parentName -->
+          </summary>
+          <ul class="outer-box__list" id="parent-num-outer" data-list="outer">
+            <li class="outer-box__item">
+              <div class="checkbox-block">
+                <input class="checkbox-block__input" id="all-parent-num-outer" type="checkbox">
+                <label class="checkbox-block__description" for="all-parent-num-outer">
+                  <!-- "Все" + parentName.toLowerCase() -->
+                </label>
+              </div>
+            </li>
+
+            <!-- <li class="outer-box__item"></li> -->
+          </ul>
+        </details>
+      </li>
+    </template>
+
+    <!-- шаблон для элемента outer списка parent: N, children: false -->
+    <!-- если у родителя ul атрибут dataset.outer -->
+    <template>
+      <li class="outer-box__item">
+        <div class="checkbox-block">
+          <input class="checkbox-block__input" id="id-num-outer" type="checkbox">
+          <label class="checkbox-block__description" for="id-num-outer">
+            <!-- conte -->
+          </label>
+        </div>
+      </li>
+    </template>
+
+
+    <!-- Шаблон для поля формы в листе parent: 0, children: false-->
+    <template id="form__field__single">
+      <li class="form__field">
+        <div class="checkbox-block checkbox-block--single">
+          <input class="checkbox-block__input" id="id-num-single" type="checkbox">
+          <label class="checkbox-block__description" for="id-num-single">
+            <!-- content -->
+          </label>
+        </div>
+      </li>
+    </template>
+
+    <!-- <script type="module" src="js/groups.min.js"></script> -->
+    <!-- <script type="module" src="js/get-flat-array-of-components.min.js"></script> -->
+    <script type="module" src="js/flat-array.min.js"></script>
+    <script type="module" src="js/create-component.min.js"></script>
+    <script type="module" src="js/set-all-checkbox.min.js"></script>
+    <script type="module" src="js/form-validating.min.js"></script>
+    <script type="module" src="js/main.min.js"></script>
+  </body>
+
+</html>

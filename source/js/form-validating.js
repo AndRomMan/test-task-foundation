@@ -82,6 +82,5 @@ function clearForm(inputArray) {
 }
 
 function sendToServer(data) {
-  console.log('Отправка данных на сервер');
   console.log(data);
 }
