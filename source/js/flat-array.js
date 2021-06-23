@@ -1,4 +1,4 @@
-const flatArray = [
+const componentFlatArray = [
   {parentId: 0, id: 1, name: 'Дети', children: true},
   {parentId: 0, id: 29, name: 'Подростки', children: true},
   {parentId: 0, id: 30, name: 'Женщины', children: true},
@@ -41,4 +41,4 @@ const flatArray = [
   {parentId: 15, id: 18, name: 'Тяжелое заболевание 3', children: false},
 ];
 
-export {flatArray};
+export {componentFlatArray};

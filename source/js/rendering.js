@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
 'use strict';
 
-import {flatArray} from './flat-array.min.js';
+// import {componentFlatArray} from './flat-array.min.js';
+import {componentFlatArray} from './get-flat-array.min.js';
 
 const ALL_ID = 'all-';
 const LIST_NOT_FOUND = 'not found';
@@ -28,14 +29,15 @@ const singleFieldTemplate = document.querySelector(SINGLE_FIELD_TEMPLATE);
 
 let components = [];
 
-if (flatArray) {
-  components = flatArray;
+if (componentFlatArray) {
+  components = componentFlatArray;
 }
 
 createHtmlStructure(components);
 
 function createHtmlStructure(componentArray) {
-  // фрагмент HTML структуры, которую будем добавлять в корневой список
+  // создаем фрагмент HTML структуры,
+  // которую будем добавлять в корневой список
   let fragment = document.createDocumentFragment();
 
   componentArray.forEach((obj) => {
@@ -101,7 +103,7 @@ function createOuterBoxField(id, name) {
   return setIdLabelAndSummary(element, id, name);
 }
 
-// определяем тип родительского списка
+// определяем тип родительского списка и проверяем на его наличие
 function getTypeOfParentBox(parentId, fragment) {
   let typeOfList = LIST_NOT_FOUND;
   let parentList = fragment.querySelector(`ul[id="${String(parentId)}"]`);
@@ -134,6 +136,7 @@ function createInnerBoxField(id, name) {
   return setIdLabelAndSummary(element, id, name);
 }
 
+// установка необходимых атрибутов
 function setIdAndLabel(element, id, name) {
   let input = element.querySelector('input');
   input.id = String(id);
@@ -145,6 +148,7 @@ function setIdAndLabel(element, id, name) {
   return element;
 }
 
+// установка необходимых атрибутов
 function setIdLabelAndSummary(element, id, name) {
   let summary = element.querySelector('summary');
   summary.textContent = name;
