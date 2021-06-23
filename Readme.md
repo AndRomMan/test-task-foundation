@@ -7,9 +7,11 @@
 - **[CV на career.habr.com](https://career.habr.com/andromman)**
 
 * * *
-Ссылка на хостинг: **[Целевые группы](https://demindesign.ru//foundation)**
+* Ссылка на хостинг: **[Целевые группы](https://demindesign.ru//foundation)**
 
-Ссылка на репозиторий: **[Foundation](https://github.com/AndRomMan/foundation)** 
+* Ссылка на репозиторий: **[Foundation](https://github.com/AndRomMan/foundation)** 
+
+* Исходные данные(массив с объектами) находятся в файле ***groups.js***
 
 * * *
 ## Задача
