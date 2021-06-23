@@ -105,7 +105,7 @@ let groups = [
         groups: [],
       },
       {
-        id: 46,
+        id: 52,
         name: 'Южные народности',
         groups: [],
       },
@@ -153,7 +153,7 @@ let groups = [
         groups: [],
       },
       {
-        id: 49,
+        id: 53,
         name: 'Предприятия',
         groups: [],
       },

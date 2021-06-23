@@ -1,12 +1,9 @@
 /* eslint-disable no-console */
 'use strict';
 
-const CHECKBOX = 'checkbox-block__input';
-const ZERO_LEVEL_ID = '0';
-const ALL_ID = 'all-';
-const ROOT_LIST = 'ul';
+import {FORM_BUTTON, ALL_ID, CHECKBOX, ROOT_LIST, ZERO_LEVEL_ID} from './main.min.js';
 
-let submitButton = document.querySelector('.form__button');
+let submitButton = document.querySelector(`.${FORM_BUTTON}`);
 
 initFormSubmitButton();
 
@@ -72,17 +69,20 @@ function getJoinedIdArray(childrenArray, parentArray) {
   let joinedArray = [...childrenIdArray, ...parentIdArray];
   let uniqueJoinedSet = new Set(joinedArray);
   // убираем лишние id: '0' и начинающиеся с 'all-'
-  let filteredArray = getFilteredArray(uniqueJoinedSet);
+  let filteredArray = getFilteredNumberArray(uniqueJoinedSet);
   return filteredArray;
 }
 
-function getFilteredArray(inputSet) {
+function getFilteredNumberArray(inputSet) {
   inputSet.delete(ZERO_LEVEL_ID);
+
   inputSet.forEach((value) => {
-    if (value.startsWith(ALL_ID)) inputSet.delete(value);
+    if (value.startsWith(ALL_ID)) {
+      inputSet.delete(value);
+    }
   });
 
-  return Array.from(inputSet);
+  return Array.from(inputSet).map((elem) => Number(elem));
 }
 
 function clearForm(inputArray) {
@@ -94,5 +94,9 @@ function clearForm(inputArray) {
 }
 
 function sendToServer(data) {
-  console.log(data);
+  if (data.length === 0) {
+    console.log('Нет данных для отправки на сервер');
+  } else {
+    console.log(data);
+  }
 }

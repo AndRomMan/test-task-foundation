@@ -1,30 +1,24 @@
 /* eslint-disable no-console */
 'use strict';
 
-// import {componentFlatArray} from './flat-array.min.js';
 import {componentFlatArray} from './get-flat-array.min.js';
 
-const ALL_ID = 'all-';
-const LIST_NOT_FOUND = 'not found';
-const OUTER_TYPE = 'outer';
-const INNER_TYPE = 'inner';
+import {ALL_ID} from './main.min.js';
+import {LIST_NOT_FOUND, OUTER_TYPE, INNER_TYPE} from './main.min.js';
+import {
+  MAIN_ROOT_LIST,
+  INNER_BOX_FIELD_TEMPLATE,
+  INNER_BOX_ITEM_TEMPLATE,
+  OUTER_BOX_FIELD_TEMPLATE,
+  OUTER_BOX_ITEM_TEMPLATE,
+  SINGLE_FIELD_TEMPLATE,
+} from './main.min.js';
 
-const MAIN_ROOT_LIST = 'ul[id="0"]';
 const mainRootList = document.querySelector(MAIN_ROOT_LIST);
-
-const INNER_BOX_FIELD_TEMPLATE = '#inner_box_form_field';
 const innerBoxFieldTemplate = document.querySelector(INNER_BOX_FIELD_TEMPLATE);
-
-const INNER_BOX_ITEM_TEMPLATE = '#inner_box_item';
 const innerBoxItemTemplate = document.querySelector(INNER_BOX_ITEM_TEMPLATE);
-
-const OUTER_BOX_FIELD_TEMPLATE = '#outer_box_form_field';
 const outerBoxFieldTemplate = document.querySelector(OUTER_BOX_FIELD_TEMPLATE);
-
-const OUTER_BOX_ITEM_TEMPLATE = '#outer_box_item';
 const outerBoxItemTemplate = document.querySelector(OUTER_BOX_ITEM_TEMPLATE);
-
-const SINGLE_FIELD_TEMPLATE = '#single_form_field';
 const singleFieldTemplate = document.querySelector(SINGLE_FIELD_TEMPLATE);
 
 let components = [];

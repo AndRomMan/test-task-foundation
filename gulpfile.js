@@ -175,7 +175,7 @@ function getJS() {
   return (
     src(path.script.source)
       .pipe(plumber())
-      .pipe(sourcemap.init())
+      // .pipe(sourcemap.init())
       // .pipe(
       //   babel({
       //     presets: ['@babel/preset-env'],
@@ -190,7 +190,7 @@ function getJS() {
       )
       // .pipe(concat('main.js'))
       .pipe(rename({suffix: '.min'}))
-      .pipe(sourcemap.write('.'))
+      // .pipe(sourcemap.write('.'))
       .pipe(dest(path.script.build))
       .pipe(browsersync.stream())
   );
@@ -201,7 +201,7 @@ function getCSS() {
   return (
     src(path.style.source)
       .pipe(plumber())
-      .pipe(sourcemap.init())
+      // .pipe(sourcemap.init())
       .pipe(sass())
       // будем использовать gulp-autoprefixer,
       // поскольку возникли проблемы с совместимостью
@@ -210,7 +210,7 @@ function getCSS() {
       .pipe(dest(path.style.build))
       .pipe(csso())
       .pipe(rename({suffix: '.min'}))
-      .pipe(sourcemap.write('.'))
+      // .pipe(sourcemap.write('.'))
       .pipe(dest(path.style.build))
       .pipe(browsersync.stream())
   );

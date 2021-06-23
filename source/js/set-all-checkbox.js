@@ -1,11 +1,9 @@
 /* eslint-disable no-console */
 'use strict';
 
-const ALL_ID = 'all-';
-const ROOT_LIST = 'ul';
-const CHECKBOX = 'checkbox-block__input';
+import {ALL_ID, CHECKBOX, CHECKBOX_INPUT, ROOT_LIST} from './main.min.js';
 
-let cheboxForAllInputsList = document.querySelectorAll(`.checkbox-block__input[id^=${ALL_ID}]`);
+let cheboxForAllInputsList = document.querySelectorAll(`.${CHECKBOX_INPUT}[id^=${ALL_ID}]`);
 
 initCheckboxesForAll();
 
