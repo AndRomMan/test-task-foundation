@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="fonts/FuturaPT-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="fonts/FuturaPT-Demi.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link type="image/png" sizes="16x16" rel="icon" href="./favicon-16x16.png">
 
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="description" content="Тестовое задание для БФ Нужна помощь">
-    <title>Компонент: Целевые группы</title>
+    <title>Целевые группы</title>
   </head>
 
   <body>
@@ -31,6 +33,7 @@
         <form class="form" action="#" method="GET">
           <ul class="form__list" id="0">
             <!-- корневой список -->
+
           </ul>
 
           <button class="form__button" type="submit">
@@ -43,23 +46,25 @@
 
     <!-- шаблон для элемента inner списка parent: N, children: true -->
     <template id="inner_box_form_field">
-      <details class="inner-box">
-        <summary class="inner-box__title">
-          <!-- название родительского листа innerParentName -->
-        </summary>
-        <ul class="inner-box__list" id="parent-num-inner" data-list="inner">
-          <li class="inner-box__item">
-            <div class="checkbox-block">
-              <input class="checkbox-block__input" id="all-parent-num-inner" type="checkbox">
-              <label class="checkbox-block__description" for="all-parent-num-inner">
-                <!-- "Все" + innerParentName.toLowerCase() -->
-              </label>
-            </div>
-          </li>
+      <li class="inner-box__item">
+        <details class="inner-box">
+          <summary class="inner-box__title">
+            <!-- name -->
+          </summary>
+          <ul class="inner-box__list" id="parent-num-inner" data-list="inner">
+            <li class="inner-box__item">
+              <div class="checkbox-block">
+                <input class="checkbox-block__input" id="all-parent-num-inner" type="checkbox">
+                <label class="checkbox-block__description" for="all-parent-num-inner">
+                  <!-- "Все" + name.toLowerCase() -->
+                </label>
+              </div>
+            </li>
 
-          <!-- <li class="inner-box__item"></li> -->
-        </ul>
-      </details>
+            <!-- <li class="inner-box__item"></li> -->
+          </ul>
+        </details>
+      </li>
     </template>
 
     <!-- шаблон для элемента inner списка parent: N, children: false -->
@@ -75,20 +80,19 @@
       </li>
     </template>
 
-
     <!-- Шаблон для поля формы в листе parent: 0, children: true -->
     <template id="outer_box_form_field">
       <li class="form__field">
         <details class="outer-box">
           <summary class="outer-box__title form__field-title">
-            <!-- название родительского листа parentName -->
+            <!-- name -->
           </summary>
           <ul class="outer-box__list" id="parent-num-outer" data-list="outer">
             <li class="outer-box__item">
               <div class="checkbox-block">
                 <input class="checkbox-block__input" id="all-parent-num-outer" type="checkbox">
                 <label class="checkbox-block__description" for="all-parent-num-outer">
-                  <!-- "Все" + parentName.toLowerCase() -->
+                  <!-- "Все" + name.toLowerCase() -->
                 </label>
               </div>
             </li>
@@ -112,7 +116,6 @@
       </li>
     </template>
 
-
     <!-- Шаблон для поля формы в листе parent: 0, children: false-->
     <template id="single_form_field">
       <li class="form__field">
@@ -125,7 +128,7 @@
       </li>
     </template>
 
-    <script type="module" src="js/flat-array.min.js"></script>
+    <script type="module" src="js/groups.min.js"></script>
     <script type="module" src="js/get-flat-array.min.js"></script>
     <script type="module" src="js/rendering.min.js"></script>
     <script type="module" src="js/set-all-checkbox.min.js"></script>

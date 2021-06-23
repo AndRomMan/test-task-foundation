@@ -156,7 +156,7 @@ function browserSync() {
     ui: false,
     // browser: ['firefox'],
     browser: ['chrome'],
-    // browser: ["chrome", "firefox"]
+    // browser: ['chrome', 'firefox'],
   });
 }
 

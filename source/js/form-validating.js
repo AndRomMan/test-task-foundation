@@ -20,7 +20,7 @@ function submitButtonClickHandler(evt) {
   evt.preventDefault();
   // находим все checked input
   let checkedInputArray = getCheckedInputArray();
-  let parentArray = getParentElement(checkedInputArray);
+  let parentArray = getParentArray(checkedInputArray);
 
   // получаем массив id родителей (списки) и детей (input)
   let idArray = getJoinedIdArray(checkedInputArray, parentArray);
@@ -38,20 +38,32 @@ function getCheckedInputArray() {
   return Array.from(checkedInputs);
 }
 
-function getParentElement(elementArray) {
+function getParentArray(elementArray) {
   let parentArray = [];
+
   elementArray.forEach((element) => {
-    parentArray.push(element.closest(ROOT_LIST));
+    getClosestParents(element, parentArray);
   });
+
   return parentArray;
 }
 
+function getClosestParents(element, parentArray) {
+  let closestParent = element.closest(ROOT_LIST);
+  parentArray.push(closestParent);
+
+  if (closestParent.id !== '0') {
+    let upToParentOfParent = closestParent.parentElement;
+    getClosestParents(upToParentOfParent, parentArray);
+  }
+}
+
 function getIdArray(elementArray) {
-  let outIdArray = [];
+  let idArray = [];
   elementArray.forEach((element) => {
-    outIdArray.push(element.id);
+    idArray.push(element.id);
   });
-  return outIdArray;
+  return idArray;
 }
 
 function getJoinedIdArray(childrenArray, parentArray) {
