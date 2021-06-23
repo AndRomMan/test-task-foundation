@@ -55,7 +55,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // ========= html producing module =========
 const fileinclude = require('gulp-file-include');
-// const htmlmin = require('gulp-html-minifier-terser');
+const htmlmin = require('gulp-html-minifier-terser');
 
 // ========= img producing module =========
 // gulp-imagemin включает плагины:
@@ -217,24 +217,22 @@ function getCSS() {
 }
 
 function getHTML() {
-  return (
-    src(path.html.source)
-      .pipe(plumber())
-      .pipe(
-        fileinclude({
-          prefix: '@@',
-        })
-      )
-      // .pipe(
-      //   htmlmin({
-      //     collapseWhitespace: true,
-      //     collapseInlineTagWhitespace: true,
-      //     removeComments: true,
-      //   })
-      // )
-      .pipe(dest(path.html.build))
-      .pipe(browsersync.stream())
-  );
+  return src(path.html.source)
+    .pipe(plumber())
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+      })
+    )
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        collapseInlineTagWhitespace: true,
+        removeComments: true,
+      })
+    )
+    .pipe(dest(path.html.build))
+    .pipe(browsersync.stream());
 }
 
 function watchFiles() {

@@ -21,6 +21,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.x",
     "gulp-file-include": "^2.2.x",
+    "gulp-html-minifier-terser": "^6.0.1",
     "gulp-imagemin": "^7.1.x",
     "gulp-plumber": "^1.2.x",
     "gulp-postcss": "^8.0.x",
